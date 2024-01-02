@@ -1,27 +1,16 @@
-import { Avatar, Box, Button, Card, CardContent, CardMedia, Dialog, DialogContent, DialogTitle, Divider, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemText, TextField, Tooltip, Typography } from "@mui/material";
+import { useState } from "react";
+import { useForm } from 'react-hook-form';
+import { observer } from "mobx-react-lite";
+import { Avatar, Box, Button, Card, CardMedia, Dialog, DialogContent, DialogTitle, Divider, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemText, TextField, Tooltip, Typography } from "@mui/material";
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
 import PhonelinkRingOutlinedIcon from '@mui/icons-material/PhonelinkRingOutlined';
 import PersonIcon from '@mui/icons-material/Person';
-import storeBusiness from '../store/business';
-import { useState } from "react";
-import { useForm } from 'react-hook-form';
-import { observer } from "mobx-react-lite";
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
+import storeBusiness from '../store/business';
 const BusinessDetails = observer(() => {
     const data = storeBusiness.business;
     const [flagUpdate, setFlagUpdate] = useState(false);
-
-    // const data = {
-    //     name: "Coding Academy",
-    //     address: "Rothschild 60 Tel Aviv",
-    //     phone: "03-1234567",
-    //     owner: "Yariv Katz",
-    //     logo: "https://coding-academy.org/images/ca_logo.png",
-    //     description: "The best coding academy in the world",
-    // };
-
-
     return (
         <>
             <Grid container spacing={1}>

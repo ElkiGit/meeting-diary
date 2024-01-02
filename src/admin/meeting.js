@@ -1,16 +1,15 @@
 import { observer } from 'mobx-react-lite';
+import { Grid, Card, Typography ,CardContent, Avatar} from '@mui/material';
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import storeAppointment from '../store/appointment';
 import storeService from '../store/service';
-import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-import { Grid, Card, Typography ,CardContent, Avatar} from '@mui/material';
 const  Meeting=observer(()=>{
   const data=storeAppointment.dataAppointments;
   let dataSort=data.slice().sort((a,b)=>Date.parse(a.dateTime)-Date.parse(b.dateTime)).reverse();
   
   return(
     <>
-    {/* {dataSort.map(meet=><MeetItem meetItem={meet}></MeetItem>)} */}
-    {console.log(dataSort)}
+   
     <Grid container spacing={2}>
       {dataSort.map((meet) => (
         <Grid item xs={12} sm={6} md={4} key={meet.id}>
@@ -23,7 +22,7 @@ const  Meeting=observer(()=>{
 })
 export default Meeting;
 function MeetItem({meetItem}){
-  console.log("Meet Item")
+
   const currentDate = new Date();
   const meetDate = new Date(meetItem.dateTime);
   let color = '#41e6a6';

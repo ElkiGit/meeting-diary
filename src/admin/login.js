@@ -1,17 +1,14 @@
-import { Avatar, Box, Button, IconButton, InputAdornment, OutlinedInput, Tooltip, Typography } from "@mui/material";
-import SendIcon from '@mui/icons-material/Send'
-import { useForm } from 'react-hook-form';
-import TextField from '@mui/material/TextField';
 import { useEffect, useState } from 'react';
-import storeBusiness from '../store/business';
+import { useForm } from 'react-hook-form';
+import { Avatar, Box, IconButton, InputAdornment, Tooltip, Typography,TextField } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send'
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-
+import storeBusiness from '../store/business';
 export default function Login() {
     const { register, handleSubmit, reset } = useForm({ defaultValues: { name: "", password: "" } });
     const [flagAdmin, setFlagAdmin] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     function checkLogin(admin) {
-        console.log(admin)
         storeBusiness.validationLogin(admin, setFlagAdmin);
 
     }
@@ -72,7 +69,7 @@ export default function Login() {
                
             </form>
             {flagAdmin &&
-                <Typography variant="body2" color="error"  >
+                <Typography variant="body2" color="error" sx={{ fontSize: '18px'}} >
                     The username or password is not correct!
                 </Typography>}
 

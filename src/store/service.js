@@ -29,7 +29,7 @@ class Service {
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(serviceToAdd)
         }).then((res) => {
-            console.log(res)
+      
             if(res.status==200){
                 runInAction(() => {
                     this.dataServices.push(serviceToAdd);

@@ -12,7 +12,7 @@ class Appointment {
     fetchData() {
         axios.get('http://localhost:8787/appointments').then(res => {
             this.dataAppointments = res.data;
-            console.log("data appoointment", res.data);
+           
         }
         )
     }
@@ -32,7 +32,7 @@ class Appointment {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(appointment)
         }).then((res) => {
-            console.log(res);
+           
             if (res.status == 200) {
                 runInAction(() => {
                     dateOk(false);

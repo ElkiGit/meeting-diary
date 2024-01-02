@@ -14,7 +14,7 @@ class Business {
     }
     fetchData() {
         axios.get('http://localhost:8787/businessData').then(res => {
-            console.log(res.data);
+           
             this.business = res.data;
         }
         )
@@ -25,7 +25,7 @@ class Business {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(business)
         }).then((res) => {
-            console.log(res);
+            
             this.business=business;
 
         })
@@ -37,7 +37,7 @@ class Business {
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(admin)
         }).then((res) => {
-            console.log(res);
+          
             if(res.status==200)
                 this.isAdmin=true;
             if(res.status==401){

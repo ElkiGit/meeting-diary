@@ -12,7 +12,7 @@ const AddMeeting = observer((props) => {
     const data = storeServices.dataServices;
     const [isHover, setIsHover] = useState(false);
     function addMeetToStore(meet) {
-        console.log(meet);
+       
         storeMeeting.addAppointment(meet, setDateOk, setSecondTime);
     }
     const [ser, setSer] = useState('');
@@ -59,7 +59,6 @@ const AddMeeting = observer((props) => {
                         />
                     </div>
                     <div>
-                        {/* <label htmlFor="clientPhone">Phone</label> */}
                         <TextField
                             id="margin-normal" margin="normal"
                             type="text"
@@ -70,7 +69,6 @@ const AddMeeting = observer((props) => {
                         />
                     </div>
                     <div>
-                        {/* <label htmlFor="clientEmail">Email</label> */}
                         <TextField
                             id="margin-normal" margin="normal"
                             type="email"
@@ -90,8 +88,6 @@ const AddMeeting = observer((props) => {
                             helperText={errors.clientEmail?.message}
                         />
                     </div>
-
-                    {/* <button >add</button> */}
                 </Box>
                 {secondTime && <Typography variant="body2" color="error" sx={{ fontSize: '18px', marginLeft: '28%' }}  >
                     The date catched
