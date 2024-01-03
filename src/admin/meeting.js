@@ -5,7 +5,7 @@ import storeAppointment from '../store/appointment';
 import storeService from '../store/service';
 const  Meeting=observer(()=>{
   const data=storeAppointment.dataAppointments;
-  let dataSort=data.slice().sort((a,b)=>Date.parse(a.dateTime)-Date.parse(b.dateTime)).reverse();
+  let dataSort=data.slice().sort((a,b)=>Date.parse(a.dateTime)-Date.parse(b.dateTime));
   
   return(
     <>
@@ -25,19 +25,31 @@ function MeetItem({meetItem}){
 
   const currentDate = new Date();
   const meetDate = new Date(meetItem.dateTime);
-  let color = '#41e6a6';
-  
+  let color = '#3cef25';
+  let color2='#3cef25';
+
   if (currentDate.toDateString() === meetDate.toDateString()) {
     color = '#ff4900';
+    color2='#ff4900';
   } else if (
     meetDate >= currentDate &&
     meetDate <= new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000)
   ) {
     color = '#ffe600';
+    color2='#ffe600';
   }
+  else if(new Date(currentDate.getTime())>meetDate){
+    color='#bdbdbd'
+    color2='#009f92'
+  
+  }
+
+  
+  
   
   return (<>
-    <Card sx={{ backgroundColor: 'white', color: color, padding: '1rem' }}>
+
+    <Card sx={{ backgroundColor: 'white', color: color2, padding: '1rem' }}>
     <CardContent >
       <Typography variant="h5" component="div">
       Meeting Details

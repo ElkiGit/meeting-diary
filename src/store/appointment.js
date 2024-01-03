@@ -17,27 +17,27 @@ class Appointment {
         )
     }
     addAppointment(appointment, dateOk, secondDate) {
-        // const appointmentToAdd = {
-        //     id: this.dataAppointments.length + 1,
-        //     serviceType: appointment.serviceType,
-        //     dateTime: appointment.dateTime,
-        //     clientName: appointment.clientName,
-        //     clientPhone: appointment.clientPhone,
-        //     clientEmail: appointment.clientEmail,
-        // }
+        const appointmentToAdd = {
+            id: this.dataAppointments.length + 1,
+            serviceType: appointment.serviceType,
+            dateTime: appointment.dateTime,
+            clientName: appointment.clientName,
+            clientPhone: appointment.clientPhone,
+            clientEmail: appointment.clientEmail,
+        }
 
 
         fetch('http://localhost:8787/appointment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(appointment)
+            body: JSON.stringify(appointmentToAdd)
         }).then((res) => {
            
             if (res.status == 200) {
                 runInAction(() => {
                     dateOk(false);
-                    this.dataAppointments.push(appointment);
-                    // this.data=this.fetchData();
+                    this.dataAppointments.push(appointmentToAdd);
+                   
                 })
             }
             else {

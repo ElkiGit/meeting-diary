@@ -60,7 +60,7 @@ export default function Login() {
                          onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
                         sx={{ marginTop: "30px", marginBottom: "30px" }}>
 
-                        <Avatar sx={{ backgroundColor: "#41e6a6" }}>
+                        <Avatar sx={{ backgroundColor: '#009f92'}}>
                         <SendIcon />
                         </Avatar>
                     </IconButton>

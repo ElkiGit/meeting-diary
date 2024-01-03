@@ -12,7 +12,7 @@ const AddMeeting = observer((props) => {
     const data = storeServices.dataServices;
     const [isHover, setIsHover] = useState(false);
     function addMeetToStore(meet) {
-       
+
         storeMeeting.addAppointment(meet, setDateOk, setSecondTime);
     }
     const [ser, setSer] = useState('');
@@ -35,8 +35,8 @@ const AddMeeting = observer((props) => {
                     <div>
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-label">select service</InputLabel>
-                            <Select  {...register("serviceType",{required: "The type meet is a required field"})}
-                             error={Boolean(errors.serviceType)}
+                            <Select  {...register("serviceType", { required: "The type meet is a required field" })}
+                                error={Boolean(errors.serviceType)}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={ser}
@@ -98,7 +98,7 @@ const AddMeeting = observer((props) => {
                         onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
                         sx={{ marginLeft: "43%" }}>
 
-                        <Avatar sx={{ backgroundColor: "#41e6a6" }}>
+                        <Avatar sx={{ backgroundColor: '#009f92' }}>
                             <AddIcon ></AddIcon>
                         </Avatar>
                     </IconButton>

@@ -17,8 +17,8 @@ const HomeUser = observer(() => {
             onClick={() => setAddMeet(true)} onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)} 
             sx={{marginTop:"30px",marginBottom:"30px"}}>
 
-                    <Avatar sx={{backgroundColor:"#41e6a6"}}>
-                        <AddIcon ></AddIcon>
+                    <Avatar >
+                        <AddIcon sx={{color:'#009f92'}} ></AddIcon>
                     </Avatar>
                 </IconButton>
             </Tooltip>

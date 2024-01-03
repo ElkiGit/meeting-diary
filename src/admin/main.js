@@ -19,8 +19,8 @@ const Main=observer(() =>{
       <>
        
         <BusinessDetails></BusinessDetails>
-        <Link to={'/admin/meeting'}><Button variant="contained" sx={{backgroundColor:"#41e6a6",marginTop:"30px",margin:'2%'}}>meeting</Button></Link>
-        <Link to={'/admin/service'}><Button variant="contained" sx={{backgroundColor:"#41e6a6",marginTop:"30px",margin:'2%'}}>services</Button></Link>
+        <Link to={'/admin/meeting'}><Button  sx={{color:'#009f92',backgroundColor:'#bdbdbd',marginTop:"30px",margin:'2%',}}>meeting</Button></Link>
+        <Link to={'/admin/service'}><Button  sx={{color:'#009f92',backgroundColor:'#bdbdbd',marginTop:"30px",margin:'2%',}}>services</Button></Link>
         <br/>
         <Outlet />
       </>

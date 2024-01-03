@@ -11,12 +11,12 @@ const BusinessServices=observer(()=>{
     return(
         <>
          <Tooltip 
-          title={isHover?'ADD MEETING':''}>
+          title={isHover?'ADD SERVICE':''}>
             <IconButton 
             onClick={()=>setFlagAddService(true)} onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)} 
             sx={{marginTop:"30px",marginBottom:"30px"}}>
 
-                    <Avatar sx={{backgroundColor:"#41e6a6"}}>
+                    <Avatar sx={{backgroundColor:'#009f92'}}>
                         <AddIcon ></AddIcon>
                     </Avatar>
                 </IconButton>
@@ -107,7 +107,7 @@ export function AddService({closeForm}){
              onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)} 
             sx={{marginLeft:"43%"}}>
 
-                    <Avatar sx={{backgroundColor:"#41e6a6"}}>
+                    <Avatar sx={{backgroundColor:'#009f92'}}>
                         <AddIcon ></AddIcon>
                     </Avatar>
                 </IconButton>

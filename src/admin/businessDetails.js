@@ -24,8 +24,8 @@ const BusinessDetails = observer(() => {
                     >
                         <ListItem>
                             <ListItemAvatar>
-                                <Avatar>
-                                    <WorkOutlineOutlinedIcon sx={{ color: '#41e6a6' }} />
+                                <Avatar sx={{backgroundColor:'#009f92' }}>
+                                    <WorkOutlineOutlinedIcon sx={{ backgroundColor:'#009f92' }} />
                                 </Avatar>
                             </ListItemAvatar>
 
@@ -38,8 +38,8 @@ const BusinessDetails = observer(() => {
                         <Divider variant="inset" component="li" />
                         <ListItem>
                             <ListItemAvatar>
-                                <Avatar>
-                                    <PersonIcon sx={{ color: '#41e6a6' }} />
+                                <Avatar sx={{backgroundColor:'#009f92' }}>
+                                    <PersonIcon sx={{backgroundColor:'#009f92' }} />
                                 </Avatar>
                             </ListItemAvatar>
                             <ListItemText
@@ -50,8 +50,8 @@ const BusinessDetails = observer(() => {
                         <Divider variant="inset" component="li" />
                         <ListItem>
                             <ListItemAvatar>
-                                <Avatar>
-                                    <BusinessOutlinedIcon sx={{ color: '#41e6a6' }} />
+                                <Avatar sx={{backgroundColor:'#009f92' }}>
+                                    <BusinessOutlinedIcon  />
                                 </Avatar>
                             </ListItemAvatar>
                             <ListItemText
@@ -62,8 +62,8 @@ const BusinessDetails = observer(() => {
                         <Divider variant="inset" component="li" />
                         <ListItem>
                             <ListItemAvatar>
-                                <Avatar>
-                                    <PhonelinkRingOutlinedIcon sx={{ color: '#41e6a6' }} />
+                                <Avatar sx={{backgroundColor:'#009f92' }}>
+                                    <PhonelinkRingOutlinedIcon  />
                                 </Avatar>
                             </ListItemAvatar>
                             <ListItemText
@@ -74,22 +74,22 @@ const BusinessDetails = observer(() => {
                     </List>
                 </Grid>
                 <Grid item xs={3}>
-                <Card    sx={{marginTop:"30%"}}>
+                <Card    sx={{marginTop:"1%",height:'98%'}}>
       <CardMedia
         component="img"
         alt="logo"
-        height="120"
+        height='100%'
         image={data?.logo}
     
       />
     </Card>
-    {storeBusiness.isAdmin && <Button sx={{ color:"#41e6a6", marginLeft: "5%",marginTop:"10%" }} onClick={() => setFlagUpdate(true)}>update</Button>}
+    {storeBusiness.isAdmin && <Button sx={{ color:'#009f92', marginLeft: "5%",marginTop:"10%" }} onClick={() => setFlagUpdate(true)}>update</Button>}
                 </Grid>
                
             </Grid>
 
             <Dialog open={flagUpdate} onClose={() => setFlagUpdate(false)}>
-                <DialogTitle sx={{ color: "#41e6a6", marginLeft: "35%" }}>Update details</DialogTitle>
+                <DialogTitle sx={{ color: '#009f92', marginLeft: "35%" }}>Update details</DialogTitle>
                 <DialogContent>
                     <UpdateBusinessDetails flagUpdate={setFlagUpdate}></UpdateBusinessDetails>
 
@@ -175,7 +175,7 @@ const UpdateBusinessDetails = observer(({ flagUpdate }) => {
             <IconButton type='submit'
              onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)} 
              sx={{marginLeft:"43%"}}>
-                    <Avatar sx={{backgroundColor:"#41e6a6"}}>
+                    <Avatar sx={{backgroundColor:'#009f92'}}>
                         <ChangeCircleIcon></ChangeCircleIcon>
                     </Avatar>
                 </IconButton>
