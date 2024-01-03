@@ -4,10 +4,12 @@ import axios from "axios";
 class Business {
     business = null;
     isAdmin=false;
+    isUser=false;
     constructor() {
         makeObservable(this, {
             business: observable,
             isAdmin:observable,
+            isUser:observable,
             addBusiness: action,
         });
         this.fetchData();
@@ -46,6 +48,9 @@ class Business {
             }
                             
         })
+    }
+    user(x){
+        this.isUser=x; 
     }
 
 }

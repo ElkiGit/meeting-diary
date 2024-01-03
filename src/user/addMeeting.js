@@ -12,7 +12,7 @@ const AddMeeting = observer((props) => {
     const data = storeServices.dataServices;
     const [isHover, setIsHover] = useState(false);
     function addMeetToStore(meet) {
-
+        console.log(meet)
         storeMeeting.addAppointment(meet, setDateOk, setSecondTime);
     }
     const [ser, setSer] = useState('');
@@ -84,8 +84,8 @@ const AddMeeting = observer((props) => {
                             type="datetime-local"
                             label={'date'}
                             {...register("dateTime", { required: "The date is a required field" })}
-                            error={Boolean(errors.clientEmail)}
-                            helperText={errors.clientEmail?.message}
+                            error={Boolean(errors.dateTime)}
+                            helperText={errors.dateTime?.message}
                         />
                     </div>
                 </Box>

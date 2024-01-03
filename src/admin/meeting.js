@@ -22,7 +22,6 @@ const  Meeting=observer(()=>{
 })
 export default Meeting;
 function MeetItem({meetItem}){
-
   const currentDate = new Date();
   const meetDate = new Date(meetItem.dateTime);
   let color = '#3cef25';
@@ -56,7 +55,7 @@ function MeetItem({meetItem}){
       </Typography>
       <Typography variant="body2" color="text.secondary">
         <span style={{ fontWeight: 'bold' }}> Service Type: </span>
-        {storeService.dataServices?.filter(item=>item.id==meetItem.serviceType).name};
+        {storeService.dataServices.filter((item)=>item.id==meetItem.serviceType)[0].name};
       </Typography>
       <Typography variant="body2" color="text.secondary">
         <span style={{ fontWeight: 'bold' }}> Date and Time:</span> {new Date(meetItem.dateTime).toLocaleString()}

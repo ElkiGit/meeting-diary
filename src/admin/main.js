@@ -6,6 +6,7 @@ import storeBusiness from '../store/business'
 import Login from './login';
 
 const Main=observer(() =>{
+  storeBusiness.user(false);
   if (!storeBusiness.isAdmin) {
     return (
       <>
@@ -15,10 +16,11 @@ const Main=observer(() =>{
     )
   }
   else {
+    
     return (
       <>
        
-        <BusinessDetails></BusinessDetails>
+        <BusinessDetails admin={false}></BusinessDetails>
         <Link to={'/admin/meeting'}><Button  sx={{color:'#009f92',backgroundColor:'#bdbdbd',marginTop:"30px",margin:'2%',}}>meeting</Button></Link>
         <Link to={'/admin/service'}><Button  sx={{color:'#009f92',backgroundColor:'#bdbdbd',marginTop:"30px",margin:'2%',}}>services</Button></Link>
         <br/>

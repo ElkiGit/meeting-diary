@@ -11,6 +11,7 @@ import storeBusiness from '../store/business';
 const BusinessDetails = observer(() => {
     const data = storeBusiness.business;
     const [flagUpdate, setFlagUpdate] = useState(false);
+
     return (
         <>
             <Grid container spacing={1}>
@@ -83,7 +84,9 @@ const BusinessDetails = observer(() => {
     
       />
     </Card>
-    {storeBusiness.isAdmin && <Button sx={{ color:'#009f92', marginLeft: "5%",marginTop:"10%" }} onClick={() => setFlagUpdate(true)}>update</Button>}
+    {!storeBusiness.isUser&&
+    <Button sx={{ color:'#009f92', marginLeft: "5%",marginTop:"10%" }} onClick={() => setFlagUpdate(true)}>
+    update</Button>}
                 </Grid>
                
             </Grid>

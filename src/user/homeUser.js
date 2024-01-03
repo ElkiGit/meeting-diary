@@ -5,12 +5,14 @@ import AddIcon from '@mui/icons-material/Add';
 import AddMeeting from "./addMeeting";
 import BusinessDetails from "../admin/businessDetails";
 import ServiceDetails from "./serviceDetails";
+import storeBusiness from '../store/business';
 const HomeUser = observer(() => {
     const [addMeet, setAddMeet] = useState(false);
-    const[isHover,setIsHover]=useState(false)
+    const[isHover,setIsHover]=useState(false);
+    storeBusiness.user(true);
     return (
         <>
-            <BusinessDetails></BusinessDetails>
+            <BusinessDetails ></BusinessDetails>
           <Tooltip 
           title={isHover?'ADD MEETING':''}>
             <IconButton 
